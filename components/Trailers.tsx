@@ -3,15 +3,12 @@ import {
   Box, Button,
   Flex, Heading,
   Modal, ModalBody,
-  ModalCloseButton,
   Image,
   ModalContent,
-  ModalHeader,
   ModalOverlay,
   Text, useDisclosure, useMediaQuery
 } from "@chakra-ui/react";
 import React, { PointerEvent } from "react";
-import { IActor } from "../utils/interfaces";
 import { useQuery } from "react-query";
 import { fetchTrailers } from "../utils/queryFunctions";
 import NextImage from "next/image";
@@ -26,12 +23,12 @@ interface ITrailer {
   key: string
 }
 
-const Trailer = ({ trailer }: {trailer: ITrailer}) => {
+const Trailer = ({ trailer, key }: {trailer: ITrailer, key: string | number}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   return (
-    <Box key={trailer.key}  maxWidth='100vw' margin='auto'>
+    <Box key={key}  maxWidth='100vw' margin='auto'>
       <Button _focus={{ border: '0' }} position='relative' width='100%' height='100%' variant='unstyled'
               onClick={onOpen}>
         <NextImage
@@ -44,7 +41,8 @@ const Trailer = ({ trailer }: {trailer: ITrailer}) => {
           top="50%"
           left="50%"
           transform="translate(-50%,-50%)"
-          zIndex="2"/>
+          zIndex="2"
+          alt="Play video"/>
       </Button>
       <Modal size={{ base: 'xl', md: '4xl', xl: '6xl' }} onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay/>
@@ -79,7 +77,7 @@ function Trailers({ media, movie_id }: Props) {
           <Heading textAlign='center'>Trailers</Heading>
           <Flex flexDirection={{ base: 'column', md: 'row' }} justifyContent='space-evenly'>
             {trailers.map((trailer) => (
-              <Trailer trailer={trailer}/>
+              <Trailer key={trailer.key} trailer={trailer}/>
             ))}
           </Flex>
         </Flex> :
