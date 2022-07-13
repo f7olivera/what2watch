@@ -1,7 +1,7 @@
 import { IMovie } from "./interfaces";
 import { QueryFunctionContext, QueryKey } from "react-query";
 
-const BASE_URL = 'https://what2watch-k.vercel.app/api/tmdb'
+const BASE_URL = '/api/tmdb'
 
 async function fetchResource(url: string) {
   const response = await fetch(url);

@@ -11,7 +11,7 @@ function useGenres(category: string): {genres: IGenreNames, genreIds: IGenreIds}
   React.useEffect(() => {
     if (window.localStorage !== undefined && window.localStorage.getItem(`${category}_genres`) !== null) return;
     if (category) {
-      const url = `https://what2watch-k.vercel.app/api/tmdb/${category}/genres`;
+      const url = `${window.location.origin}/api/tmdb/${category}/genres`;
       (async () => {
         const response = await fetch(url);
         const jsonResponse = await response.json();
