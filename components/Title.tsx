@@ -74,8 +74,8 @@ function Title({ media }: Props) {
     ) :
     (
       <>
-        <Flex
-          position='relative' alignContent='center' alignItems='start' justify='center' minHeight='100vh'
+        <Box
+          position='relative' minHeight='100vh'
           backgroundImage={`url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')`} backgroundSize='cover'
           backgroundPosition='center top'>
           <Flex flexDirection='column' gap={10}>
@@ -151,10 +151,12 @@ function Title({ media }: Props) {
           </Flex>
           <Box
             className='gradient'
+            top='0'
+            left='0'
             width='100%'
             height='100%'
             position='absolute'/>
-        </Flex>
+        </Box>
         <Movies list={similar.data?.results || []} category={moviesQuery.category} isLoading={similar.isLoading}
                 media={media}/>
         <Paginator url={typeof window !== 'undefined' ? window.location.pathname : '/'} page={page} setPage={setPage}
