@@ -82,7 +82,7 @@ function Title({ media }: Props) {
             <Flex className='main-wrapper' width='100%' height='100%' alignContent='center' alignItems='center'
                   justify='center' flexWrap='wrap'>
               <Flex
-                zIndex='1' flexDirection='column' width='40%' minWidth='min(30rem, 95vw)' maxWidth='30rem'
+                zIndex='1' flexDirection='column' minWidth='min(30rem, 95vw)' maxWidth='30rem'
                 padding='2rem 2% 0rem 2%' alignSelf='start'>
                 <Skeleton position='relative' display='flex' justifyContent='center' isLoaded={!isLoading}>
                   {movie.poster_path ?
@@ -96,7 +96,7 @@ function Title({ media }: Props) {
                 </Skeleton>
               </Flex>
               <Flex
-                zIndex='1' flexDirection='column' width='50%' minWidth='min(95vw, 30rem)' padding='2rem 2% 0 2%'
+                zIndex='1' flexDirection='column' minWidth='min(95vw, 30rem)' padding='2rem 2% 0 2%'
                 alignSelf='start' maxWidth='40rem'>
                 <Skeleton isLoaded={!isLoading}>
                   <Heading fontSize='2.5rem'>{movie.title || movie.name}</Heading>
