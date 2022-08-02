@@ -28,7 +28,7 @@ const Trailer = ({ trailer, key }: {trailer: ITrailer, key: string | number}) =>
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   return (
-    <Box key={key}  maxWidth='100vw' margin='auto'>
+    <Box key={key} maxWidth='100vw'>
       <Button _focus={{ border: '0' }} position='relative' width='100%' height='100%' variant='unstyled'
               onClick={onOpen}>
         <NextImage
@@ -73,9 +73,9 @@ function Trailers({ media, movie_id }: Props) {
   return (
     <>
       {!isLoading && trailers?.length ?
-        <Flex flexDirection='column' zIndex='1'>
+        <Flex flexDirection='column' zIndex='1' gap={4}>
           <Heading textAlign='center'>Trailers</Heading>
-          <Flex flexDirection={{ base: 'column', md: 'row' }} justifyContent='space-evenly'>
+          <Flex flexDirection={{ base: 'column', md: 'row' }} gap={8} flexWrap='wrap' justifyContent='center'>
             {trailers.map((trailer) => (
               <Trailer key={trailer.key} trailer={trailer}/>
             ))}
