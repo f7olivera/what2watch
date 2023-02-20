@@ -85,6 +85,9 @@ export const fetchAiring = async ({ queryKey }: QueryFunctionContext<QueryKey>) 
 
 export const fetchTrailers = async ({ queryKey }: QueryFunctionContext<QueryKey>) => {
   const [_, media, id] = queryKey;
+  if (id === undefined) {
+    throw new Error('id undefined')
+  }
   const url = `${BASE_URL}/${media}/${id}/videos`;
   const response = await fetchResource(url);
   return await response.results.filter((video: {type: string, site: string}) => video.type === 'Trailer' && video.site === 'YouTube');
@@ -92,6 +95,9 @@ export const fetchTrailers = async ({ queryKey }: QueryFunctionContext<QueryKey>
 
 export const fetchCertification = async ({ queryKey }: QueryFunctionContext<QueryKey>) => {
   const [_, media, id] = queryKey;
+  if (id === undefined) {
+    throw new Error('id undefined')
+  }
   const url = `${BASE_URL}/${media}/${id}/certifications`;
   const response = await fetchResource(url);
   const certifications = await

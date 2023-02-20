@@ -70,6 +70,9 @@ function Index({ media = 'movie', id }: Props) {
 
   // Gets all available genres
   React.useEffect(() => {
+    if (!media)
+      return;
+
     const url = `/api/tmdb/${media}/genres`;
     (async () => {
       const response = await fetch(url);
