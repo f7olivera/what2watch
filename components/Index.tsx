@@ -29,8 +29,7 @@ function Index({ media = 'movie', id }: Props) {
   const { genres: tvGenres } = useGenres('tv');
   const genres = media === 'movie' ? movieGenres : tvGenres;
   const [genres2, setGenres] = React.useState([] as IGenre[]);
-  const [moviesQuery, dispatch] =
-    React.useReducer(moviesReducer, initialState, init);
+  const [moviesQuery, dispatch] = React.useReducer(moviesReducer, initialState, init);
   const router = useRouter()
   const [page, setPage] = React.useState(1);
   const [totalPages, setTotalPages] = React.useState(0);

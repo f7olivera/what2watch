@@ -96,6 +96,5 @@ export const fetchCertification = async ({ queryKey }: QueryFunctionContext<Quer
   const response = await fetchResource(url);
   const certifications = await
     response.results.filter((elem: {iso_3166_1: string, release_dates: {certification: string}[]}) => elem.iso_3166_1 === 'US');
-  console.log(certifications)
   return certifications?.length && certifications[0].release_dates.length ? certifications[0].release_dates[0].certification : null;
 }

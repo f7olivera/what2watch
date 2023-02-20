@@ -8,7 +8,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <Index media='movie' id={'movie-popular'}/>
+      <Index id={'movie-popular'} media='movie'/>
     </div>
   );
 }
