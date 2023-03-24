@@ -1,11 +1,8 @@
-import type { NextPage } from 'next'
-import React from "react";
+import type { NextPage } from "next";
 import Title from "../../components/Title";
 
 const Tv: NextPage = () => {
-  return (
-    <Title media='tv'/>
-  );
-}
+  return <Title media="tv" />;
+};
 
 export default Tv;

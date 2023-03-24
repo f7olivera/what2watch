@@ -1,17 +1,13 @@
-import React, { ReactNode } from 'react';
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
-  Box,
-  Flex,
-  HStack,
+  Box, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Heading, HStack,
   IconButton,
-  useDisclosure,
-  useColorModeValue,
-  Stack, Heading, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody,
+  useDisclosure
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import Sidebar from "./Sidebar";
 import Link from 'next/link';
+import { ReactNode } from 'react';
 import Search from "./Search";
+import Sidebar from "./Sidebar";
 
 const NavLink = ({ href, children }: {href: string, children: ReactNode}) => (
   <Link href={href}>

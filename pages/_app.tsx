@@ -1,13 +1,12 @@
-import '../styles/globals.css'
-import Layout from '../components/Layout'
-import type { AppProps } from 'next/app'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "@fontsource/karla";
-import { ReactQueryDevtools } from 'react-query/devtools'
-import { QueryClient, QueryClientProvider } from "react-query";
-import { SessionProvider } from "next-auth/react"
 import { Session } from "next-auth";
-import React from "react";
+import { SessionProvider } from "next-auth/react";
+import type { AppProps } from "next/app";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import Layout from "../components/Layout";
+import "../styles/globals.css";
 
 const theme = extendTheme({
   colors: {
@@ -43,14 +42,13 @@ const queryClient = new QueryClient({
       staleTime: 7200000,
     },
   },
-})
+});
 
 interface Props extends AppProps {
-  session: Session
+  session: Session;
 }
 
 function App({ Component, session, pageProps }: Props) {
-
   return (
     <SessionProvider session={session}>
       <QueryClientProvider client={queryClient}>
@@ -59,7 +57,7 @@ function App({ Component, session, pageProps }: Props) {
             <Component {...pageProps} />
           </Layout>
         </ChakraProvider>
-        <ReactQueryDevtools initialIsOpen={false}/>
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </SessionProvider>
   );

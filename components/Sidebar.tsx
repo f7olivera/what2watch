@@ -1,28 +1,28 @@
-import { Box, Flex, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
-import Link from 'next/link';
-import React from "react";
-import Authentication from "./Authentication";
+import { Box, Flex } from "@chakra-ui/react";
+import { useSession } from "next-auth/react";
+import Link from "next/link";
 import MovieCategories from "./MovieCategories";
-import TvCategories from "./TvCategories";
-import { useSession } from "next-auth/react"
-import { CloseIcon } from "@chakra-ui/icons";
 import Search from "./Search";
+import TvCategories from "./TvCategories";
 
 function Sidebar() {
-  const { data: session } = useSession()
+  const { data: session } = useSession();
 
   return (
-    <Flex color='lightgray' height='100%' flexDirection='column' justifyContent='space-between'>
-      <Flex flexDirection='column' gap='4'>
+    <Flex
+      color="lightgray"
+      height="100%"
+      flexDirection="column"
+      justifyContent="space-between"
+    >
+      <Flex flexDirection="column" gap="4">
         <Search alwaysVisible={true} />
-        <MovieCategories/>
-        <TvCategories/>
+        <MovieCategories />
+        <TvCategories />
 
         {/* Trending */}
         <Box>
-          <Link href={`/trending`}>
-            Trending
-          </Link>
+          <Link href={`/trending`}>Trending</Link>
         </Box>
 
         {/* Watchlist */}

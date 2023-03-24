@@ -1,15 +1,14 @@
-import { Box, Flex, Heading, Badge, Skeleton, Image, Text, useMediaQuery, Spinner } from "@chakra-ui/react";
+import { Badge, Box, Flex, Heading, Image, Skeleton, Spinner, Text } from "@chakra-ui/react";
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import React from "react";
-import { useQuery } from 'react-query'
+import { useQuery } from 'react-query';
 import { IMovie, IMovieResults } from "../utils/interfaces";
-import { fetchCertification, fetchMovie } from "../utils/queryFunctions";
 import moviesReducer, { init, initialState } from "../utils/moviesReducer";
+import { fetchCertification, fetchMovie } from "../utils/queryFunctions";
 import Cast from "./Cast";
 import Movies from "./Movies";
 import Paginator from "./Paginator";
-import Trailer from "./Trailers";
 import Trailers from "./Trailers";
 // @ts-ignore
 import humanizeDuration from 'humanize-duration';

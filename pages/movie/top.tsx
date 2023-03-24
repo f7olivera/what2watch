@@ -3,12 +3,10 @@ import Index from "../../components/Index";
 
 function MovieIndex() {
   React.useEffect(() => {
-    document.title = 'Top movies';
+    document.title = "Top movies";
   }, []);
 
-  return (
-    <Index media='movie' id={'top'}/>
-  );
+  return <Index media="movie" id={"top"} />;
 }
 
 export default MovieIndex;

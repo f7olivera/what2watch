@@ -3,12 +3,10 @@ import Index from "../../components/Index";
 
 function TvIndex() {
   React.useEffect(() => {
-    document.title = 'Popular TV Shows';
+    document.title = "Popular TV Shows";
   }, []);
 
-  return (
-    <Index media='tv' id='popular'/>
-  );
+  return <Index media="tv" id="popular" />;
 }
 
 export default TvIndex;

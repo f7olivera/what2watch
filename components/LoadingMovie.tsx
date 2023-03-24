@@ -1,56 +1,84 @@
-import React from "react";
-
 function LoadingMovie() {
-
   return (
-    <svg width="200px" height="200px"
-         style={{ height: '100%', width: '100%' }} version="1.1"
-         viewBox="0 0 100 100" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
-      <g className="ldl-scale" style={{ "transformOrigin": "50% 50%", "transform": "rotate(0deg) scale(0.8, 0.8)" }}>
+    <svg
+      width="200px"
+      height="200px"
+      style={{ height: "100%", width: "100%" }}
+      version="1.1"
+      viewBox="0 0 100 100"
+      xmlSpace="preserve"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        className="ldl-scale"
+        style={{
+          transformOrigin: "50% 50%",
+          transform: "rotate(0deg) scale(0.8, 0.8)",
+        }}
+      >
         <g className="ldl-ani">
           <g className="ldl-layer">
-            <g className="ldl-ani"
-               style={{
-                 "animation": "1.85185s linear -1.15741s infinite normal forwards running breath-9b408b4e-5134-42e4-8ba1-6dcae99c675f",
-                 "transformOrigin": "50px 50px",
-                 "transform": "scale(0.91)"
-               }}>
-              <path d="M34.615 40.553h30.769v18.894H34.615z" fill="#0a0a0a">
-              </path>
+            <g
+              className="ldl-ani"
+              style={{
+                animation:
+                  "1.85185s linear -1.15741s infinite normal forwards running breath-9b408b4e-5134-42e4-8ba1-6dcae99c675f",
+                transformOrigin: "50px 50px",
+                transform: "scale(0.91)",
+              }}
+            >
+              <path
+                d="M34.615 40.553h30.769v18.894H34.615z"
+                fill="#0a0a0a"
+              ></path>
             </g>
           </g>
           <g className="ldl-layer">
-            <g className="ldl-ani"
-               style={{
-                 "animation": "1.85185s linear -1.38889s infinite normal forwards running breath-9b408b4e-5134-42e4-8ba1-6dcae99c675f",
-                 "transformOrigin": "50px 50px",
-                 "transform": "scale(0.91)"
-               }}>
-              <path d="M34.615 15.83h30.769v18.893H34.615z" fill="#0a0a0a">
-              </path>
+            <g
+              className="ldl-ani"
+              style={{
+                animation:
+                  "1.85185s linear -1.38889s infinite normal forwards running breath-9b408b4e-5134-42e4-8ba1-6dcae99c675f",
+                transformOrigin: "50px 50px",
+                transform: "scale(0.91)",
+              }}
+            >
+              <path
+                d="M34.615 15.83h30.769v18.893H34.615z"
+                fill="#0a0a0a"
+              ></path>
             </g>
           </g>
           <g className="ldl-layer">
-            <g className="ldl-ani"
-               style={{
-                 "animation": "1.85185s linear -1.62037s infinite normal forwards running breath-9b408b4e-5134-42e4-8ba1-6dcae99c675f",
-                 "transformOrigin": "50px 50px",
-                 "transform": "scale(0.91)"
-               }}>
-              <path d="M34.615 65.277h30.769V84.17H34.615z" fill="#0a0a0a">
-              </path>
+            <g
+              className="ldl-ani"
+              style={{
+                animation:
+                  "1.85185s linear -1.62037s infinite normal forwards running breath-9b408b4e-5134-42e4-8ba1-6dcae99c675f",
+                transformOrigin: "50px 50px",
+                transform: "scale(0.91)",
+              }}
+            >
+              <path
+                d="M34.615 65.277h30.769V84.17H34.615z"
+                fill="#0a0a0a"
+              ></path>
             </g>
           </g>
           <g className="ldl-layer">
-            <g className="ldl-ani"
-               style={{
-                 "animation": "1.85185s linear -1.85185s infinite normal forwards running breath-9b408b4e-5134-42e4-8ba1-6dcae99c675f",
-                 "transformOrigin": "50px 50px",
-                 "transform": "scale(0.91)"
-               }}>
+            <g
+              className="ldl-ani"
+              style={{
+                animation:
+                  "1.85185s linear -1.85185s infinite normal forwards running breath-9b408b4e-5134-42e4-8ba1-6dcae99c675f",
+                transformOrigin: "50px 50px",
+                transform: "scale(0.91)",
+              }}
+            >
               <path
                 d="M82.817 10.049c-1.407.254-2.371 1.578-2.371 3.008v3.703a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.846a2.915 2.915 0 0 0-2.915-2.915H31.7c-.126 0-.246.022-.367.037a2.905 2.905 0 0 0-2.548 2.878v3.846a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.703c0-1.43-.964-2.754-2.371-3.008a2.917 2.917 0 0 0-3.459 2.866v74.028c0 1.43.964 2.754 2.371 3.008a2.918 2.918 0 0 0 3.459-2.866v-3.846a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.846a2.905 2.905 0 0 0 2.548 2.878c.122.015.242.037.367.037h36.6a2.915 2.915 0 0 0 2.915-2.915v-3.846a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.703c0 1.43.964 2.754 2.371 3.008a2.918 2.918 0 0 0 3.459-2.866v-74.17a2.917 2.917 0 0 0-3.458-2.865zM28.785 72.633a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.362a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.362zm0-13.969a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.361a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.361zm0-13.967a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.361a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.361zm0-13.968a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.362a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.362zm36.6 53.441h-30.77V65.277h30.769V84.17zm0-24.723h-30.77V40.553h30.769v18.894zm0-24.724h-30.77V15.83h30.769v18.893zm15.06 37.91a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.362a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.362zm0-13.969a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.361a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.361zm0-13.967a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.361a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.361zm0-13.968a2.388 2.388 0 0 1-2.388 2.388h-4.454a2.388 2.388 0 0 1-2.388-2.388v-3.362a2.388 2.388 0 0 1 2.388-2.388h4.454a2.388 2.388 0 0 1 2.388 2.388v3.362z"
-                fill="#28292f"/>
+                fill="#28292f"
+              />
             </g>
           </g>
         </g>
