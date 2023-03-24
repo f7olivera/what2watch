@@ -1,4 +1,6 @@
-A website to find movies and TV shows, made with Next.js 
+A website to find movies and TV shows, made with Next.js
+
+![homepage](home.png)
 
 ## Features
 
